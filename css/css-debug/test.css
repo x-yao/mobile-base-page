@@ -1,0 +1,8 @@
+body {
+  background: #AAA; }
+
+.retina {
+  transform: scale(0.5);
+  transform-origin: left top; }
+
+/*# sourceMappingURL=test.css.map */

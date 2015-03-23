@@ -1,0 +1,8 @@
+//$s-sprite-dimensions: 0.5;
+// $s-sprite-dimensions :true;
+//$s-spacing: 20px;
+@import "xxx/*.png";
+@include all-xxx-sprites;
+// $sW  :  72px;
+// $s1H  :  xxx-sprite-height(ll);
+// $s1W  :  xxx-sprite-width(ll);
