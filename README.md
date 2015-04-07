@@ -25,6 +25,11 @@
 js文件会将`js/js-debug`里面的js压缩到`js-min`
 `grunt local`命令会开启监控，如果你修改`sass`目录，`js/js-debug`目录，下文件会自动进行编译处理。如果只在命令执行`grunt`则不会进入文件监控。
 
+文件结构：
+![文件结构][1]
 
+工作流
+![工作流][2]
 
-
+[1]: http://moussecake.u.qiniudn.com/QQ20150407-1@2x.png
+[2]: http://moussecake.u.qiniudn.com/QQ20150407-2@2x.png
