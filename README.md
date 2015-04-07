@@ -5,8 +5,10 @@
 具体思路是以sass作为css基本编辑工具，autoprefixer处理编译后的css文件，然后进行相应的压缩。js包含基本库，以及提供压缩。compass处理雪碧图。
 
 首先请确保安装[node](https://nodejs.org/)
+
 其次安装sass以及compass：
 可以点这个学习安装[sass](http://www.w3cplus.com/sassguide/install.html)
+
 然后继续运行`gem install compass`安装compass
 >如果不想使用compass请将项目下`nocompass.js`替换`Gruntfile.js`。
 
