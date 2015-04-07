@@ -1,17 +1,5 @@
 module.exports = function(grunt) {
 	var autoprefixer = require('autoprefixer-core');
-	var CONF_COMPASS_OPTIONS = {
-		  imagesDir: 'images',
-		  //generatedImagesDir: 'build/images',
-		  //httpGeneratedImagesPath: '../images',
-		  sassDir: 'images',
-		  cssDir: 'css/css',
-		  //fontsDir: 'src/fonts',
-		  //httpFontsPath: '../fonts',
-		  //httpFontsDir: 'build/fonts',
-		  environment: 'development',
-		  httpPath:'../../'
-		};
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' + '<%= grunt.template.today("yyyy-mm-dd H:MM") %> */',
@@ -81,11 +69,6 @@ module.exports = function(grunt) {
 		//         dest:'css/'
 		// 	}
 		// }
-		compass: { // Task 
-			dist: { // Target 
-				options: CONF_COMPASS_OPTIONS
-			}
-		},
 		uglify: {
 			build: {
 				options: {
@@ -114,10 +97,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
-	grunt.loadNpmTasks('grunt-contrib-compass');
 	// grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-postcss');
-	grunt.registerTask('co', ['compass']);
 	grunt.registerTask('default', ['sass', 'postcss', 'cssmin', 'uglify']);
-	grunt.registerTask('local', ['sass', 'postcss', 'cssmin', 'uglify', 'compass','watch']);
+	grunt.registerTask('local', ['sass', 'postcss', 'cssmin', 'uglify','watch']);
 };
